@@ -33,9 +33,9 @@ const firebaseConfig = {
       if (emailExists) {
 
         await auth.sendSignInLinkToEmail(email, {
-          url: 'https://your-github-pages-url/', 
-          handleCodeInApp: true,
-        });
+            url: 'https://vrallis.github.io/magic_link_demo/', // Your GitHub Pages URL
+            handleCodeInApp: true, // Required to handle magic link in the app
+          });
         messageElem.textContent = 'Magic link sent! Check your email.';
         window.localStorage.setItem('emailForSignIn', email);
       } else {
